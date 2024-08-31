@@ -1,0 +1,30 @@
+.col_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 20px;
+}
+
+.col_1 p {
+    font-size: 2rem;
+}
+
+.col_2 {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+.card_image-i {
+    /* padding: 10px; */
+    background-color: rgb(224, 214, 195);
+    font-size: 1.5rem;
+    border-radius: 2px;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.progress_per_i {
+    font-size: 1.5rem;
+}

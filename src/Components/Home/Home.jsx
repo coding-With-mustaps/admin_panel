@@ -1,13 +1,15 @@
 import React from "react";
 import { HomeMainWrapper } from "./Home.style";
+import CardContainer from "./Cards/CardContainer";
+import ChartContainer from "../Chart/ChartContainer";
 
 
 const Home = () => {
 
     return (
         <HomeMainWrapper>
-
-            Home
+           <CardContainer />
+           <ChartContainer />
         </HomeMainWrapper>
     )
 };
