@@ -31,10 +31,21 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
+    position: relative;
     list-style: none;
     margin-right: 20px;
     cursor: pointer;
 `;
+
+const SpanDigit = styled.span`
+    background-color: red;
+    color: white;
+    padding: 2px 3px;
+    border-radius: 3px;
+    position: absolute;
+    top: -9px;
+    right: -8px;
+`
 
 const Img = styled.img`
     border-radius: 50%;
@@ -43,4 +54,4 @@ const Img = styled.img`
     margin-right: 20px;
 `
 
-export { Nav, Form, Input, Ul, Li, Img };
+export { Nav, Form, Input, Ul, Li, Img, SpanDigit };

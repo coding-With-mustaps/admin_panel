@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Input, Ul, Li, Img, Nav } from './Navigation.style';
+import { Form, Input, Ul, Li, Img, Nav, SpanDigit } from './Navigation.style';
 import userImage from "../../../Assets/images/mustapha.jpg";
 import "./Navigation.css";
 
@@ -32,9 +32,11 @@ const Navigation = () => {
           </Li>
           <Li>
             <NotificationsNoneOutlinedIcon />
+            <SpanDigit>0</SpanDigit>
           </Li>
           <Li>
             <ModeCommentOutlinedIcon />
+            <SpanDigit>0</SpanDigit>
           </Li>
           <Img width="30" height="30" src={userImage} alt="" />
           <Li>

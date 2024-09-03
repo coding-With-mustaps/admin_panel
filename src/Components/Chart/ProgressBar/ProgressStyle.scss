@@ -1,0 +1,19 @@
+.prev-sales-made {
+    display: flex;
+    align-items: center;
+    margin: 22px 0;
+
+    div {
+        margin: 0 10px;
+
+        h2 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
