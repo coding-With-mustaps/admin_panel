@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const HomeMainWrapper = styled.div`
-    margin-top: 50px;
+    /* padding-top: 5px; */
 `
 
 

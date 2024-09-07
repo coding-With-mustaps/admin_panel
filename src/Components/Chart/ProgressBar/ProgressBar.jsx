@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CircularContainer, Progress, ProgressInner } from "./ProgressBar.style";
 import { CircularProgressbar } from 'react-circular-progressbar';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
@@ -6,11 +6,13 @@ import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import 'react-circular-progressbar/dist/styles.css';
 import { H2 } from "../AreaChart/AreaChart.style";
 import "./ProgressStyle.scss";
+import { ThemeContext } from "../../../Context/ThemeContext";
 
 const ProgressBar = () => {
+    const { theme } = useContext(ThemeContext);
 
     return (
-        <Progress>
+        <Progress variate={theme}>
             <ProgressInner>
                 <H2>Total Revenue (Gh&cent;)</H2>
                 <CircularContainer>

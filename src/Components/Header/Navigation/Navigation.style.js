@@ -8,6 +8,7 @@ const Nav = styled.nav`
     justify-content:space-between;
     align-items:center;
     padding: 15px 20px;
+    background-color: ${({variate}) => variate === "light" ? "light" : "black"};
 `;
 
 const Form = styled.form`
@@ -53,5 +54,10 @@ const Img = styled.img`
     height: 30px;
     margin-right: 20px;
 `
-
-export { Nav, Form, Input, Ul, Li, Img, SpanDigit };
+const ToggleButton = styled.button`
+    background: none;
+    border: 0;
+    margin-right: 20px;
+    cursor: pointer;
+`
+export { Nav, Form, Input, Ul, Li, Img, SpanDigit, ToggleButton };

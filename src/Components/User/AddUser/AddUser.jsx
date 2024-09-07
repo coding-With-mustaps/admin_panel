@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Form, Input, User, InnerDiv, H2, Img } from "./AddUser.style";
 import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
 import "./AddUser.scss";
 //! testing image
 import image from "../../../Assets/images/mustapha.jpg";
+import { ThemeContext } from "../../../Context/ThemeContext";
 
 const AddUser = () => {
-
+const { theme } = useContext(ThemeContext);
     return (
-        <Form className="addUserForm">
+        <Form variate={theme} className="addUserForm">
             <H2>Add New User</H2>
-            <InnerDiv>
+            <InnerDiv variate={theme}>
                 <div className="inputs-div___ profile_image">
                     <Img src={image} alt="" />
                     <div>

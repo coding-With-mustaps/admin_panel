@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 const Progress = styled.div`
-    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+    box-shadow: ${ ({variate}) => variate === "light" ? 
+        "var(--lightMode-box-shadow)" : 
+        "var(--darkMode-box-shadow)"};
     min-height: 200px;
     height: 600px;
     flex: 2;
@@ -18,9 +20,8 @@ const ProgressInner = styled.div`
 `
 
 const CircularContainer = styled.div`
-    width: 100%;
-    height: 320px;
-    max-width: 320px;
+    height: 300px;
+    width: 300px;
     margin: 22px 0;
 `
 

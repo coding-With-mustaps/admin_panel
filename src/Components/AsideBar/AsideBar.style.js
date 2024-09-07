@@ -1,22 +1,25 @@
 import styled from "styled-components";
 import { Link as RouterLink } from "react-router-dom";
 
+
+// const {theme} = useContext(ThemeContext);
+
 const Aside = styled.aside`
     position: fixed;
     top: 0;
     left: 0;
     width: 250px;
     height: 100vh;
-    background-color: white;
-    border-right: 2px solid rgb(0, 0, 0, 0.1);
+    background-color: ${ ({variate}) => variate === "light" ? "white" : "black" };
+    border-right: ${ ({variate}) => variate === "light" ? "2px solid var(--lightMode-border-color)" : "2px solid var(--darkMode-border-color)" };
 `
 
 const H1 = styled.h1`
     font-size: 1.5rem;
     color: var(--blue-color);
     padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid rgb(0, 0, 0, 0.1);
+    text-align: center;    
+    border-bottom: ${ ({variate}) => variate === "light" ? "2px solid var(--lightMode-border-color)" : "2px solid var(--darkMode-border-color)" };
     margin-bottom: 20px;
 `
 const H2  = styled.h2`
@@ -36,12 +39,12 @@ const UlList = styled.li`
     transition: background-color 0.5s ease;
 
     &:hover {
-        background-color: rgb(0, 0, 0, 0.2);
+        background: ${ ({variate}) => variate === "light" ? "rgb(0, 0, 0, 0.2)" : "rgb(50, 90, 100, 0.64)"};
     }
 `
 const StyleLink = styled(RouterLink)`
     text-decoration: none;
-    color: black;
+    color: ${ ({variate}) => variate === "light" ? "black" : "white" };
     display: flex;
     align-items:center;
     column-gap: 5px;

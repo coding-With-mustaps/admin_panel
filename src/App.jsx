@@ -11,6 +11,8 @@ import Home from "./Components/Home/Home";
 // Layout
 import MainLayout from "./Layouts/MainLayout";
 import UserContainer from "./Components/User/UserContainer";
+import UserList from "./Components/UserList/UserList";
+import SingleUserPage from "./Pages/SinglePage/SinglePage";
 
 
 const router = createBrowserRouter(
@@ -18,7 +20,9 @@ const router = createBrowserRouter(
     <Route>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
-        <Route path="users" element={<UserContainer />} />
+        <Route path="new-user" element={<UserContainer />} />
+        <Route path="users" element={<UserList />} />
+        <Route path="user/:id" element={<SingleUserPage />} />
       </Route>
     </Route>
   )

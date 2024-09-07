@@ -1,22 +1,24 @@
 import { Outlet } from "react-router-dom";
-import React from "react";
+import React, { useContext } from "react";
 import AsideBar from "../Components/AsideBar/AsideBar";
 import Header from "../Components/Header/Header";
-import { Main } from "./MainLayout.style";
+import { Main, Section } from "./MainLayout.style";
+import { ThemeContext } from "../Context/ThemeContext";
 
 
 // Styled components
 
 const MainLayout= () => {
+    const { theme } = useContext(ThemeContext);
 
-    return (<>
+    return (<Section variate={theme}>
                 <Header />
                 <AsideBar />
                 {/* <div style={{height: "150vh"}}></div> */}
-                <Main>
+                <Main variate={theme}>
                     <Outlet />
                 </Main> 
-            </>
+            </Section>
     )
 };
 

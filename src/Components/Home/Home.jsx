@@ -13,7 +13,7 @@ const Home = () => {
            <CardContainer />
            <ChartContainer />
            <CurrentTransactionList />
-           <div style={{textAlign: "center", margin: "20px 0"}}>
+           <div style={{textAlign: "center", padding: "20px 0"}}>
                 <Link to="">See all daily transactions</Link>
            </div>
         </HomeMainWrapper>

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { HeaderStyle } from "./Header.style";
 import Navigation from './Navigation/Navigation';
+import { ThemeContext } from '../../Context/ThemeContext';
 
 const Header = () => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <HeaderStyle>
+    <HeaderStyle variate={theme}>
         <Navigation />
     </HeaderStyle>
   )

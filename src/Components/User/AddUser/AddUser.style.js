@@ -3,6 +3,9 @@ import styled from "styled-components";
 const Form = styled.form`
     width: 100%;
     background-color: white;
+    color: black;
+    /* margin-top: 100px; */
+    /* background-color: ${({variate}) => variate === "light" ? "white": "black"}; */
 `
 
 const InnerDiv = styled.div`
@@ -10,6 +13,9 @@ const InnerDiv = styled.div`
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
+    /* box-shadow: ${ ({variate}) => variate === "light" ? 
+        "var(--lightMode-box-shadow)" : 
+        "var(--darkMode-box-shadow)"}; */
     padding: 20px;
     column-gap: 10px;
 `
@@ -23,7 +29,7 @@ const Input = styled.input`
     outline: none;
     border: 0;
     border-bottom: 2px solid rgb(0, 0, 0, 0.4);
-    color: black;
+    color: ${({variate}) => variate === "light" ? "black": "white"};
     background-color: white;
     width: 50%;
     max-width: 300px;

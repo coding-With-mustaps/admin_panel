@@ -17,14 +17,18 @@ const CardContainer = styled.div`
 `;
 
 const MainCard = styled.div`
-    border: 2px solid rgb(0, 0, 0, 0.2);
+    /* border: 2px solid rgb(0, 0, 0, 0.2); */
+    border: ${ ({variate}) => variate === "light" ? 
+        "2px solid var(--lightMode-border-color)" : 
+        "2px solid var(--darkMode-border-color)" };
     height: 100%;
-    box-shadow: 0  0 6px rgb(0, 0, 0, 0.3);
+    box-shadow: ${ ({variate}) => variate === "light" ? 
+        "var(--lightMode-box-shadow)" : 
+        "var(--darkMode-box-shadow)"};
     padding: 10px;
-
     display: flex;
     justify-content:space-between;
-    color: rgb(0, 0, 0, 0.5);
+    color: ${ ({variate}) => variate === "light" ? "rgb(0, 0, 0, 0.5)" : "white"};
     /* align-items: center; */
 `
 
